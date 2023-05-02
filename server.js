@@ -4,6 +4,8 @@ const path = require('path');
 const PORT = process.env.PORT || 3500;
 
 app.use('/', express.static(path.join(__dirname, '/public')))
+//Less explicit:
+//app.use(express.static('public'))
 
 app.use('/', require('./routes/root'))
 
